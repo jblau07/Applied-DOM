@@ -200,7 +200,7 @@
    * the body of the event handler function
    * will invoke the setLight11Green function
    */
-  btn11.addEventListener("click", function(){
+  btn11.addEventListener("click", function () {
     setLight11Green();
   });
 
@@ -221,7 +221,7 @@
    *   passing 2 additional arguments
    *     event, 'light-green'
    */
-  btn12.addEventListener("click", function(event){
+  btn12.addEventListener("click", function (event) {
     setLight12Class(event, 'light-green')
   });
 
@@ -238,9 +238,9 @@
    *   invoke this function expression passing 2 arguments
    *     event, 'light-green'
    */
-  btn13.addEventListener("click", function(event){
+  btn13.addEventListener("click", function (event) {
     setMyLightClass.bind(btn13)(event, 'light-green');
-    
+
   });
 
   /*
@@ -249,7 +249,7 @@
    * that is the result of invoking the Function prototype method, bind
    * on the setMyLightGreen function
    */
-
+  btn14.addEventListener("click", setMyLightGreen.bind(btn14))
 
   /*
    * Add a click event listener to btn15
@@ -258,6 +258,8 @@
    *
    * Hint: Do not declare a new function expression as an event handler.
    */
+
+  btn15.addEventListener("click", setMyLightClass.bind(btn15, event, 'light-green'))
 
 
 }(window));
