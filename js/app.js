@@ -194,7 +194,6 @@
   const setLight11Green = setMyLightClass.bind(btn11, null, 'light-green');
 
 
-
   /*
    * Add a click event listener to btn11
    * the handler method will be an anonymous function expression
@@ -239,7 +238,10 @@
    *   invoke this function expression passing 2 arguments
    *     event, 'light-green'
    */
-
+  btn13.addEventListener("click", function(event){
+    setMyLightClass.bind(btn13)(event, 'light-green');
+    
+  });
 
   /*
    * Add a click event listener to btn14
